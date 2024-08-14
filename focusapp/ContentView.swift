@@ -42,6 +42,7 @@ struct ContentView: View {
         .onDisappear {
             allowSleep()
         }
+        
     }
     func preventSleep() {
             let reasonForActivity = "App needs to prevent sleep while active" as CFString
@@ -88,10 +89,10 @@ struct ContentView: View {
     func getFormattedTime(from date: Bool) -> String {
         let formatter = DateFormatter()
         if(date){
-            formatter.dateFormat = "EEEE, MM-dd-yy"
+            formatter.dateFormat = "EEEE, M-dd-yy"
             return formatter.string(from: currentTime)
         }else{
-            formatter.dateFormat = "H:mm"
+            formatter.dateFormat = "h:mm"
             return formatter.string(from: currentTime)
         }
     }
