@@ -36,7 +36,7 @@ struct ContentView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
         }
         .onAppear {
-            startTimers(from: "/Users/micahlai/Pictures/Slideshow")
+            startTimers(from: "Pictures/lock-in-photos")
             preventSleep()
         }
         .onDisappear {
